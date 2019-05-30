@@ -9,22 +9,47 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    }
+    //outerへの遷移
+    @IBAction func didTapOuter(_ sender: Any) {
+        performSegue(withIdentifier: "toList", sender: "OUTER")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //topsへの遷移
+    @IBAction func didTapTops(_ sender: Any) {
+        performSegue(withIdentifier: "toList", sender: "TOPS")
     }
-    */
-
+    
+    //pantsへの遷移
+    @IBAction func didTapPants(_ sender: Any) {
+        performSegue(withIdentifier: "toList", sender: "PANTS")
+    }
+    
+    //hatへの遷移
+    @IBAction func didTapHat(_ sender: Any) {
+        performSegue(withIdentifier: "toList", sender: "HAT")
+    }
+    
+    //shoesへの遷移
+    @IBAction func didTapShoes(_ sender: Any) {
+        performSegue(withIdentifier: "toList", sender: "SHOES")
+    }
+    
+    //bagへの遷移
+    @IBAction func didTapBag(_ sender: Any) {
+        performSegue(withIdentifier: "toList", sender: "BAG")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toList" {
+            let nextVC = segue.destination as! OuterViewController
+            nextVC.hoge = sender as! String
+        }
+    }
+    
+    
 }
