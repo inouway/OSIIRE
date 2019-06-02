@@ -41,7 +41,7 @@ class ViewController: UIViewController {
                 
                 UIView.animate(
                     withDuration: 0.4,
-                    delay: 1.3,
+                    delay: 1.0,
                     options: .curveEaseOut,
                     animations: {() in
                         //画像サイズを大きくする

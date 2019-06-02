@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="116.00985221674877"/>
+            <point key="canvasLocation" x="-98" y="117"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="XUD-ac-Caf">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udF-aF-Nen" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.39999999999998" y="116.74876847290641"/>
+            <point key="canvasLocation" x="794" y="117"/>
         </scene>
         <!--Outer View Controller-->
         <scene sceneID="oEu-c6-Zxy">
@@ -181,6 +181,9 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <segue destination="taE-Gg-WCp" kind="presentation" identifier="toNext" id="GvW-OV-7oC"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -204,6 +207,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xz-6g-h2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1604" y="116.74876847290641"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="iRi-oM-LT6">
+            <objects>
+                <viewController id="taE-Gg-WCp" customClass="nextViewController" customModule="OSIIRE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XiT-V2-wiL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRU-bI-YZY">
+                                <rect key="frame" x="16" y="105" width="343" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwv-BD-kXi">
+                                <rect key="frame" x="42" y="63" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="SgW-eP-Fpc" kind="show" id="h6O-lM-OsO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igl-4Y-Uw2">
+                                <rect key="frame" x="150" y="604" width="75" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="🗑"/>
+                                <connections>
+                                    <action selector="didClickRemove:" destination="taE-Gg-WCp" eventType="touchUpInside" id="bOo-QZ-Ces"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gtI-vc-UJg"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="jRU-bI-YZY" id="GMk-Cs-qfv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUw-lb-yjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="900"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="7h6-8u-JCx">
@@ -263,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwB-0P-KlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.8000000000002" y="116.00985221674877"/>
+            <point key="canvasLocation" x="2809" y="116"/>
         </scene>
     </scenes>
     <resources>
@@ -276,8 +320,7 @@
         <image name="スクリーンショット 2019-05-14 2.08.46" width="1174" height="1174"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GLT-aT-pGV"/>
-        <segue reference="1d8-Zm-TD4"/>
-        <segue reference="Lhu-SK-CFb"/>
+        <segue reference="h6O-lM-OsO"/>
+        <segue reference="Q96-DM-RPp"/>
     </inferredMetricsTieBreakers>
 </document>

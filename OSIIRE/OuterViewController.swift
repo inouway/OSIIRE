@@ -21,20 +21,20 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var titleLabel: UILabel!
     
-        //画面が読み込まれたら
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            titleLabel.text = hoge
-            collectionView.delegate = self
-            collectionView.dataSource = self
-
+    //画面が読み込まれたら
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        titleLabel.text = hoge
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
     }
     
     //画像が表示されたら
     override func viewDidAppear(_ animated: Bool) {
         loadImages()
     }
-
+    
     //画像をDBから取得する処理
     func loadImages(){
         //DB接続
@@ -71,5 +71,5 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
         return cell
     }
     
-
+    
 }

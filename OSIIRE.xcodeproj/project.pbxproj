@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B04406322A36DEB00B78FB0 /* nextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B04406222A36DEB00B78FB0 /* nextViewController.swift */; };
 		0B1AF331228C4D2D00D4E1C4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AF330228C4D2D00D4E1C4 /* CategoryViewController.swift */; };
 		0B1AF333228C4D6E00D4E1C4 /* OuterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AF332228C4D6E00D4E1C4 /* OuterViewController.swift */; };
 		0B1AF335228C4DA100D4E1C4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AF334228C4DA100D4E1C4 /* CameraViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B04406222A36DEB00B78FB0 /* nextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextViewController.swift; sourceTree = "<group>"; };
 		0B1AF330228C4D2D00D4E1C4 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0B1AF332228C4D6E00D4E1C4 /* OuterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterViewController.swift; sourceTree = "<group>"; };
 		0B1AF334228C4DA100D4E1C4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				0BDC5248228A6B1100E341E0 /* AppDelegate.swift */,
 				0BC9C22622925419002507E4 /* Main.storyboard */,
+				0B04406222A36DEB00B78FB0 /* nextViewController.swift */,
 				0BF87026229F77F90003304A /* Collectionimage.swift */,
 				0BDC524A228A6B1100E341E0 /* ViewController.swift */,
 				0B1AF334228C4DA100D4E1C4 /* CameraViewController.swift */,
@@ -225,6 +228,7 @@
 				0BDC524B228A6B1100E341E0 /* ViewController.swift in Sources */,
 				0B1AF335228C4DA100D4E1C4 /* CameraViewController.swift in Sources */,
 				0B1AF331228C4D2D00D4E1C4 /* CategoryViewController.swift in Sources */,
+				0B04406322A36DEB00B78FB0 /* nextViewController.swift in Sources */,
 				0BF87027229F77F90003304A /* Collectionimage.swift in Sources */,
 				0B1AF333228C4D6E00D4E1C4 /* OuterViewController.swift in Sources */,
 				0BDC5249228A6B1100E341E0 /* AppDelegate.swift in Sources */,
