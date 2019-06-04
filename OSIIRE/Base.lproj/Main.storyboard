@@ -181,9 +181,6 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <connections>
-                                            <segue destination="taE-Gg-WCp" kind="presentation" identifier="toNext" id="GvW-OV-7oC"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -202,6 +199,7 @@
                     <connections>
                         <outlet property="collectionView" destination="X4f-hQ-OyF" id="QqJ-Mo-qtN"/>
                         <outlet property="titleLabel" destination="3cZ-al-h8w" id="HDX-e4-dg6"/>
+                        <segue destination="taE-Gg-WCp" kind="show" identifier="toNext" id="3Mk-sQ-R8r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xz-6g-h2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUw-lb-yjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="900"/>
+            <point key="canvasLocation" x="551" y="860"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="7h6-8u-JCx">
@@ -320,7 +318,8 @@
         <image name="スクリーンショット 2019-05-14 2.08.46" width="1174" height="1174"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="3Mk-sQ-R8r"/>
         <segue reference="h6O-lM-OsO"/>
-        <segue reference="Q96-DM-RPp"/>
+        <segue reference="Lhu-SK-CFb"/>
     </inferredMetricsTieBreakers>
 </document>

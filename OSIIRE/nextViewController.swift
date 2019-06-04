@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 class nextViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     
     @IBOutlet weak var imageView: UIImageView!
+    //6/4追加
+    var collectionImage:CollectionImage!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //6/4追加
+        //保存ディレクトリの取得
+        let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as NSURL
+        //保存ディレクトリ　+ 画像パス
+        let url = documentPath.appendingPathComponent(collectionImage!.path)
+        //イメージビューに画像を反映
+        imageView.image = UIImage(contentsOfFile: url!.path)
     }
+    
     
     @IBAction func didClickRemove(_ sender: Any) {
         //アラートの画面を作成する
@@ -32,34 +43,11 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print("断捨離しませんでした")
         }
         alert.addAction(noAction)
-        
-        //let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel){(UIAlertAction) in
-            //print("キャンセルが押されました")
-        //}
-        //alert.addAction(cancelAction)
-        
-        //アラートの選択肢の種類
-        //        default:通常の選択肢
-        //        destructive:否定的な選択肢　赤文字になる
-        //        cancel:アラートな内に一つだけ作成できる
-
         //        アラートの表示
         present(alert, animated: true, completion: nil)
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        //infoには写真以外にも様々なデータが詰まっているので、写真を取り出す
-        //if letには定義と条件分岐を同時に行なっている
-        //取り出せたらブロック内が実行される
-        if let pickedImage = info[.originalImage] as? UIImage {
-            //            取り出した画像の反映
-            imageView.image = pickedImage
-            //            縦横比率の設定
-            imageView.contentMode = .scaleAspectFit
-        }
-        //        表示しているカメラ画面やフォトライブラリ画面を閉じる
-        picker.dismiss(animated: true, completion: nil)
-    }
-
+    
+    
 }

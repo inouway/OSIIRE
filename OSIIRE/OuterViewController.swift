@@ -17,6 +17,7 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
     //表示内容の配列
     var collectionImages: [CollectionImage] = []
     
+    //ラベルの表示
     var hoge = ""
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -60,7 +61,6 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
         let url = documentPath.appendingPathComponent(ci.path)
         //セルに反映する処理
         //コレクションビューからセルの取得
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         //セルからイメージビューの取得
         let imageView = cell.contentView.viewWithTag(1) as!
@@ -70,6 +70,18 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         return cell
     }
-    
+    //6/3追加　cellが選択された時
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toNext", sender: collectionImages[indexPath.row])
+    }
+    //6/4追加　
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNext" {
+            let nextVC = segue.destination as! nextViewController
+            nextVC.collectionImage = sender as? CollectionImage
+        }
+    }
     
 }
+
+

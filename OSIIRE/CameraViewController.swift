@@ -12,7 +12,7 @@ import RealmSwift
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
-    //    画面のロードが終わったら実行される
+    //画面が読み込まれたら
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +36,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func showAlbum(_ sender: UIButton) {
         //このアプリでカメラを使用することを許可されているか確認
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
             let imagePicker = UIImagePickerController()
             imagePicker.sourceType = .photoLibrary
             imagePicker.delegate = self
