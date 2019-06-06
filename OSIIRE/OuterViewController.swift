@@ -70,18 +70,25 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         return cell
     }
-    //6/3追加　cellが選択された時
+    //cellが選択された時の処理
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toNext", sender: collectionImages[indexPath.row])
     }
-    //6/4追加　
+    //画面遷移時に呼ばれるメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //使うsegueが"toNext"か判断
         if segue.identifier == "toNext" {
+            //次の画面に画像を渡す
             let nextVC = segue.destination as! nextViewController
             nextVC.collectionImage = sender as? CollectionImage
+            
+            //6/6追加　使うsegueが"camera"か判断
+            if segue.identifier == "camera" {
+                //次の画面にtitleを渡す
+                let nextVC = segue.destination as! CameraViewController
+                nextVC.hoge = sender as! String
+            }
         }
+        
     }
-    
 }
-
-

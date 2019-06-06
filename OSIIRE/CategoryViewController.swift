@@ -45,7 +45,9 @@ class CategoryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //使うsegueが"toList"か判断
         if segue.identifier == "toList" {
+            //次の画面に画像を渡す
             let nextVC = segue.destination as! OuterViewController
             nextVC.hoge = sender as! String
         }

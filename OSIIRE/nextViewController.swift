@@ -35,6 +35,8 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         //選択肢の作成
         let yesAction = UIAlertAction(title: "する", style: .default){(UIAlertAction) in
             print("断捨離しました")
+            self.removeImage()
+            
         }
         //選択肢の追加
         alert.addAction(yesAction)
@@ -43,11 +45,23 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print("断捨離しませんでした")
         }
         alert.addAction(noAction)
-        //        アラートの表示
+        //アラートの表示
         present(alert, animated: true, completion: nil)
         
     }
-    
-    
+    //画像をDBから削除する処理
+    func removeImage() {
+        // ディレクトリから削除
+        let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as NSURL
+        //保存ディレクトリ　+ 画像パス
+        let url = documentPath.appendingPathComponent(collectionImage!.path)
+        try! FileManager.default.removeItem(at: url!)
+        
+        // DBから削除
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(collectionImage)
+        }
+    }
     
 }

@@ -10,6 +10,8 @@ import UIKit
 import RealmSwift
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    //6/6追加
+    var hoge = ""
     
     @IBOutlet weak var imageView: UIImageView!
     //画面が読み込まれたら
@@ -96,6 +98,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func saveFileName(_ fileName: String) {
         let ci = CollectionImage()
         ci.path = fileName
+        ci.category = fileName
         let realm = try! Realm()
         try! realm.write {
             realm.add(ci)
