@@ -96,9 +96,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func saveFileName(_ fileName: String) {
+        //モデルのいインスタンス化
         let ci = CollectionImage()
         ci.path = fileName
-        ci.category = fileName
+        ci.category = hoge
+        //Realmの初期化
         let realm = try! Realm()
         try! realm.write {
             realm.add(ci)

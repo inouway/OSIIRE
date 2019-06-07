@@ -13,7 +13,7 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     @IBOutlet weak var imageView: UIImageView!
-    //6/4追加
+    
     var collectionImage:CollectionImage!
     
     
@@ -47,6 +47,8 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         alert.addAction(noAction)
         //アラートの表示
         present(alert, animated: true, completion: nil)
+        //画面を閉じる
+        //self.dismiss(animated: true, completion: nil)
         
     }
     //画像をDBから削除する処理

@@ -147,7 +147,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="➕"/>
                                 <connections>
-                                    <action selector="didClickBtn:" destination="SgW-eP-Fpc" eventType="touchUpInside" id="Z5W-20-SPZ"/>
+                                    <action selector="didClickBtn:" destination="SgW-eP-Fpc" eventType="touchUpInside" id="tF0-Ob-bLU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OUTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cZ-al-h8w">
@@ -200,7 +200,7 @@
                         <outlet property="collectionView" destination="X4f-hQ-OyF" id="QqJ-Mo-qtN"/>
                         <outlet property="titleLabel" destination="3cZ-al-h8w" id="HDX-e4-dg6"/>
                         <segue destination="taE-Gg-WCp" kind="show" identifier="toNext" id="3Mk-sQ-R8r"/>
-                        <segue destination="ogW-LS-eMj" kind="show" identifier="camera" id="QfS-i2-K9c"/>
+                        <segue destination="ogW-LS-eMj" kind="show" identifier="toCamera" id="hbZ-Hs-Rev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xz-6g-h2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwB-0P-KlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2809" y="116"/>
+            <point key="canvasLocation" x="2908" y="117"/>
         </scene>
     </scenes>
     <resources>
@@ -319,8 +319,8 @@
         <image name="スクリーンショット 2019-05-14 2.08.46" width="1174" height="1174"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Mk-sQ-R8r"/>
-        <segue reference="h6O-lM-OsO"/>
+        <segue reference="hbZ-Hs-Rev"/>
+        <segue reference="3cn-UT-hNq"/>
         <segue reference="Lhu-SK-CFb"/>
     </inferredMetricsTieBreakers>
 </document>

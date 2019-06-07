@@ -40,9 +40,8 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
     func loadImages(){
         //DB接続
         let realm = try! Realm()
-        //データ全権取得
-        collectionImages =
-            realm.objects(CollectionImage.self).reversed()
+        //データ全件取得
+        collectionImages = realm.objects(CollectionImage.self).filter("category = '\(hoge)'").reversed()
         //コレクションビューの更新
         collectionView.reloadData()
     }
@@ -82,13 +81,15 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
             let nextVC = segue.destination as! nextViewController
             nextVC.collectionImage = sender as? CollectionImage
             
-            //6/6追加　使うsegueが"camera"か判断
-            if segue.identifier == "camera" {
-                //次の画面にtitleを渡す
-                let nextVC = segue.destination as! CameraViewController
-                nextVC.hoge = sender as! String
-            }
+        }else if segue.identifier == "toCamera" {
+            let nextVC = segue.destination as! CameraViewController
+            nextVC.hoge = (sender as? String)!
         }
-        
     }
+    
+    
+    @IBAction func didClickBtn(_ sender: Any) {
+        performSegue(withIdentifier: "toCamera", sender: hoge)
+    }
+    
 }
