@@ -16,6 +16,7 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var collectionImage:CollectionImage!
     
+    var hoge = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,11 @@ class nextViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         try! realm.write {
             realm.delete(collectionImage)
         }
+    }
+    
+    
+    @IBAction func didClickBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

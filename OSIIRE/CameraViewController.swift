@@ -117,4 +117,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
+    @IBAction func didClickBtn(_ sender: Any) {
+        performSegue(withIdentifier: "backList", sender: hoge)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "backList" {
+            let nextVC = segue.destination as! OuterViewController
+            nextVC.hoge = sender as! String
+        }
+    }
+    
 }

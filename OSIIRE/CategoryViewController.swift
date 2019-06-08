@@ -44,10 +44,11 @@ class CategoryViewController: UIViewController {
         performSegue(withIdentifier: "toList", sender: "BAG")
     }
     
+    //値の受け渡し
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //使うsegueが"toList"か判断
         if segue.identifier == "toList" {
-            //次の画面に画像を渡す
+            //次の画面にタイトルを渡す
             let nextVC = segue.destination as! OuterViewController
             nextVC.hoge = sender as! String
         }

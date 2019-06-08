@@ -40,7 +40,7 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
     func loadImages(){
         //DB接続
         let realm = try! Realm()
-        //データ全件取得
+        //データ全件からフィルターをかけて取得
         collectionImages = realm.objects(CollectionImage.self).filter("category = '\(hoge)'").reversed()
         //コレクションビューの更新
         collectionView.reloadData()
