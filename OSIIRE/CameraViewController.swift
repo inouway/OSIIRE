@@ -75,8 +75,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             //画像を保存
             savePhoto(image, fileName: fileName)
             //画面遷移
-            performSegue(withIdentifier: "toTop", sender: nil)
+            performSegue(withIdentifier: "toTop", sender: hoge)
+            
         }
+        
+        
     }
     //画像を保存する処理
     func savePhoto(_ image: UIImage, fileName: String) {
@@ -118,13 +121,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func didClickBtn(_ sender: Any) {
-        performSegue(withIdentifier: "backList", sender: hoge)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "backList" {
+        if segue.identifier == "toTop" {
             let nextVC = segue.destination as! OuterViewController
-            nextVC.hoge = sender as! String
+            nextVC.hoge = (sender as? String)!
         }
     }
     

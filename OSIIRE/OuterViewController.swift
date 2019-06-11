@@ -66,7 +66,7 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
         UIImageView
         //イメージビューに画像を反映
         imageView.image = UIImage(contentsOfFile: url!.path)
-        
+    
         return cell
     }
     //cellが選択された時の処理
@@ -91,5 +91,9 @@ class OuterViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBAction func didClickBtn(_ sender: Any) {
         performSegue(withIdentifier: "toCamera", sender: hoge)
     }
+    
+    
+    //image.fixedOrientation()
+    //case right = 3
     
 }
