@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var imageView: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     //    画面のロードが終わったら実行される
     override func viewDidLoad() {
         super.viewDidLoad()
