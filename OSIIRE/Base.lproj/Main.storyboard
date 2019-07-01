@@ -386,7 +386,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="13" width="1166" height="1088"/>
+        <image name="13" width="672" height="480"/>
         <image name="15" width="584" height="640"/>
         <image name="16" width="1186" height="786"/>
         <image name="17" width="822" height="658"/>
@@ -396,6 +396,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1d8-Zm-TD4"/>
-        <segue reference="Q96-DM-RPp"/>
+        <segue reference="Lhu-SK-CFb"/>
     </inferredMetricsTieBreakers>
 </document>

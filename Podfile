@@ -7,5 +7,5 @@ target 'OSIIRE' do
 
   # Pods for OSIIRE
     pod 'RealmSwift'
-
+    pod 'Google-Mobile-Ads-SDK'
 end
